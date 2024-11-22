@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>moving fan</title>
+</head>
+  <style>
+    *{
+      margin: 50px 0 0;
+      background: aliceblue;
+      padding: 0%;
+      background-color: chartreuse;
+    }
+    .fan{
+      margin: 0 auto;
+      background: black;
+    }
+    .fan-1{
+      z-index: 10;
+      width: 275px;
+      height: 275px;
+      border: 10px solid blue;
+      border-radius: 50%;
+      animation-name: rotation;
+    }
+    .fan-1:hover{
+      animation-name: swing;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    @keyframes swing{
+      0%{
+        transform: none;
+      }
+      25%{
+        transform: rotate(90deg);
+        transform: translate(25px);
+      }
+      50%{
+        transform: none;
+      }
+      75%{
+        transform: rotate(-90deg);
+        transform: translate(-25px);
+      }
+      100%{
+        transform: none;
+      }
+    }
+    .core-part{
+      margin: 0 auto;
+      background-color: gainsboro;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: relative;
+      top: 112px;
+      opacity: 6.0;
+      animation-name: rotation;
+      animation-duration:1.0s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    /* .core-part{
+      animation-name: swing;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    } */
+    @keyframes rotation{
+      from{
+        transform: rotate(0deg);
+      }
+      to{
+        transform: rotate(360deg);
+      }
+    }
+    .wing{
+      margin: 0 auto;
+      background: lightsteelblue;
+      width: 30px;
+      height: 100px;
+      border-radius: 5px;
+      position: relative;
+    }
+    .wing-1{
+      top: 50px;
+      transform: rotate(0deg);
+    }
+    .wing-2{
+      right: 64px;
+      bottom: 88px;
+      transform: rotate(60deg);
+    }
+    .wing-3{
+      right: 64px;
+      bottom: 264px;
+      transform: rotate(120deg);
+    }
+    .wing-4{
+      bottom: 400px;
+      transform: rotate(180deg);
+    }
+    .wing-5{
+      left: 65px;
+      bottom: 462px;
+      transform: rotate(240deg);
+    }
+    .wing-6{
+      left: 60px;
+      bottom: 490px;
+      transform: rotate(-60deg);
+    }
+    .fan-2{
+      z-index: 1;
+      width: 50px;
+      height: 140px;
+      border-radius: 5px;
+      border-top: 10px solid blue;
+      position: relative;
+      border-bottom: 3px solid dimgray;
+      bottom: 10px;
+    }
+    .fan-3{
+      width: 250px;
+      height: 140px;
+      border: 5px solid blue;
+      border-radius: 20px;
+      position: relative;
+      bottom: 35px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+    .buttons{
+      width: 100px;
+      display: flex;
+      margin-bottom: 70px;
+      margin-top: 70px;
+      justify-content: center;
+      justify-content: space-between;
+      align-content: center;
+    }
+    .button{
+      width: 15px;
+      height: 15px;
+      display: flex;
+      margin-top: -0px;
+      justify-content: space-between;
+      justify-content: center;
+      align-content: revert;
+      background: gray;
+      border-radius: 50%;
+    }
+    /* .switch{
+
+    }
+    .button{
+
+    } */
+  </style>
+  <body>
+    <H1><marquee behavior="" direction="">A standing fan with a rotating motion</marquee></H1>
+    <div class="fan fan-1">
+      <div class="core-part">
+        <div class="wing wing-1">1</div>
+        <div class="wing wing-2">2</div>
+        <div class="wing wing-3">3</div>
+        <div class="wing wing-4">4</div>
+        <div class="wing wing-5">5</div>
+        <div class="wing wing-6">6</div>
+      </div>
+    </div>
+    <div class="fan fan-2"></div>
+    <div class="fan fan-3">
+      <div class="buttons">
+        <div class="button"></div>
+        <div class="button"></div>
+        <div class="button"></div>
+        <div class="button"></div>
+      </div>
+    </div>
+    <!-- <div class="switch">
+      <div class="button">
+
+      </div>
+    </div> -->
+  </body>
+</html>
